@@ -1,0 +1,49 @@
+#trabajos {
+    grid-template-columns: auto;
+    grid-gap: 10px;
+    padding: 0px;
+}
+
+.item {
+    padding-top: 2%;
+    padding-bottom: 2%;
+    border: 1px solid black;
+}
+
+.item_titulo { 
+    margin-left: 3%;
+    margin-top: 1%;
+    font-size: large;
+    font-style: regular 400;
+    color: black;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.item_comun {
+    padding: 1%;
+    color:black;
+    font-size: medium;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.item_img {
+    width: 33%;
+    max-width: 240px;
+    min-width: 180px;
+    padding: 2%;
+   
+}
+
+.item > .item_img {
+    float: left;
+}
+
+#header_logo {
+    
+    animation-name: slidein_no !important;
+    
+  }
+  
+  
+ 
+

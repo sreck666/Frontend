@@ -1,0 +1,380 @@
+
+/*
+SELECTOR {  propiedad: valor  };
+
+/****************************************************************** 
+**          Configuramos el marco de trabajo de la pagina
+******************************************************************/
+main {
+    color: gainsboro;
+    margin: 0 ;
+    max-width: 100%;
+    min-height: auto;
+    display: grid;
+    grid-template-columns: auto ;
+    grid-template-rows: auto 150px auto 200px;
+    grid-template-areas: 
+      "my-nav"    
+      "my-header"
+      "my-section"
+      "my-footer"
+}
+  
+/****************************************************************** 
+**              Estilo de cuerpo de la pagina section 
+******************************************************************/
+
+header {
+    grid-area: my-header;
+    background-color: #333;
+    background-image: url('/assets/fondos-web01-sup.jpg');
+    background-size: cover;
+}
+  
+nav {
+    grid-area: my-nav;
+    background-color: #333;
+    display: list-item;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+section {
+    grid-area: my-section;
+    background-color: white;
+}
+  
+footer {
+    grid-area: my-footer;
+    background-color: darkorchid;
+    background-image: url('/assets/fondos-web01-inf.jpg');
+    background-size: cover;
+}
+
+/****************************************************************** 
+**              Estilo de cuerpo de la pagina section 
+******************************************************************/
+
+
+
+
+
+.default_container {
+  display: inline-grid;
+  grid-template-columns: auto auto ;
+  font-family: 'Inter', sans-serif;
+  font-size: medium;
+  color:black;
+  padding: 2%;
+} 
+
+.item_mid{
+   padding-top: 2%;
+  padding-bottom: 2%;
+   text-align: left;
+  
+  
+
+}
+
+.item_full {
+   padding-top: 2%;
+  padding-bottom: 2%;
+}
+
+
+
+.default_img {
+  max-width: 540px;
+  width: 90%;
+  height: auto;
+  margin-left: auto;
+    margin-right: auto;
+
+}
+
+.video_corporativo {
+  display: block;
+  text-align: center;
+  padding-top: 2%;
+  padding-bottom: 2%;
+}
+
+
+.default_nota {
+  margin-left: 1%;
+
+}
+
+.default_titulo_nota {
+  font-family: 'Inter', sans-serif;
+  font-style: Semi-bold 600;
+  color: black;
+  font-size: x-large;
+  margin-left: 2%;
+}
+
+/****************************************************************** 
+**                              Estilo logo y animacion
+******************************************************************/
+
+#header_logo {
+  animation-duration: 5s;
+  animation-name: slidein;
+  border:0px solid grey;
+  margin: 8px 32px;
+  font-size: 110px;
+}
+
+@keyframes slidein {
+  from {
+    margin-left: 100%;
+   
+  }
+
+  to {
+    margin-left: 8px 32px;
+    
+  }
+}
+
+/****************************************************************** 
+**                         Estilo de footer
+******************************************************************/
+
+  .footer_redes {
+    display: flex;
+    justify-content: center;   
+  }
+
+  .footer_container {
+    margin-top: 25px;
+    font-size: small;
+  }
+
+  .footer_row {
+    margin-top: 6px;
+    font-style: italic;
+    color: white;
+  }
+    
+  .link_social {
+    margin-left: 8px;
+  }
+
+  a:link {
+    color: white;
+  }
+  
+  a:visited {
+    color: grey;
+  }
+
+  .copyright {
+    margin-top: 45px;
+      margin-right: 10px;
+      color: #fff;
+      font-size: x-small;
+      text-align: end;
+           
+  }
+
+/****************************************************************** 
+              Estilo de la barra de navegacion
+******************************************************************/
+
+  .navbar { 
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    font-family: Verdana, Geneva, Tahoma, sans-serif; 
+  }
+
+  .navbar-right {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    font-family: Verdana, Geneva, Tahoma, sans-serif; 
+    float: right;
+  }
+
+  .navbar-right a {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+
+  
+  .navbar-right a:hover:not(.active) {
+    background-color: #111;
+  }
+  
+  .active {
+    background-color: rgba(27, 27, 207, 0.466);
+  }
+
+              
+    
+
+
+  
+
+@media screen and (max-width: 576px) {
+   
+  .video_corporativo {
+    display: none;
+  }
+  .default_img { 
+    display: block;
+    max-width: 440px;
+    
+  }
+  .default_container {
+    font-size: medium;
+  }
+
+  .navbar {
+    font-size: medium;
+     
+  }
+
+  .navbar-right a {
+    display: block;
+  }
+
+  .navbar-right {
+    float: none;
+  
+  }
+  
+
+  
+  .navbar2 {
+    font-size: medium;
+     
+  }
+
+  .navbar2-right a {
+    display: flexbox;
+  }
+
+  .navbar2-right {
+    float: none;
+  
+  }
+  
+  
+  
+  .item_mid {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+ 
+  .item_full {
+    grid-column-start: 1;
+    grid-column-end: 3;
+
+  }
+
+     
+
+}
+
+/**************************************************************************
+
+                    Medias de las medidas de pantalla
+
+/**************************************************************************/
+
+@media screen and (min-width: 576px) and (max-width: 992px) {
+  
+  .navbar-right {
+    float: none;
+    text-align: center;
+  }
+
+  .default_container {
+    font-size: medium;
+  }
+
+  .navbar {
+    font-size: medium;
+     
+  }
+
+  .navbar2 {
+    font-size: medium;
+     
+  }
+
+  .video_corporativo {
+     display: block;
+ 
+  }
+
+  .default_img { 
+    display: block; 
+  
+   
+    
+  }
+  .item_mid{
+    grid-column-start: 1;
+    grid-column-end: 3;
+ 
+    
+  }
+
+  .item_full {
+    grid-column-start: 1;
+    grid-column-end: 3;
+ 
+  }
+
+  
+}
+
+
+  
+  @media screen and (min-width: 992px) {
+  
+    .default_container {
+      font-size: medium;
+    }
+
+    .navbar {
+      font-size: medium;
+       
+    }
+    
+    .navbar2 {
+      font-size: medium;
+       
+    }
+
+    .video_corporativo {
+       display: block;
+       
+    }
+
+    .img_corporativo { 
+      display: block; 
+     
+    }
+    
+    .item_full {
+      grid-column-start: 1;
+      grid-column-end: 3;
+
+    }
+
+  }
+
+
+
+
